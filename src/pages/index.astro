@@ -24,17 +24,56 @@ const links = await Astro.glob("./links/*.md");
 
     <section>
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 class="text-center text-2xl font-bold mb-4">Social</h2>
             <div class="mx-auto max-w-3xl">
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     {
-                        links.map((link) => (
-                            <Link
-                                emoji={link.frontmatter.emoji}
-                                title={link.frontmatter.title}
-                                href={link.frontmatter.href}
-                            />
-                        ))
+                        links
+                            .filter(link => link.frontmatter.block === 1)
+                            .map((link) => (
+                                <Link
+                                    emoji={link.frontmatter.emoji}
+                                    title={link.frontmatter.title}
+                                    href={link.frontmatter.href}
+                                />
+                            ))
                     }
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 class="text-center text-2xl font-bold mb-4">Support</h2>
+            <div class="mx-auto max-w-3xl">
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    {
+                        links
+                            .filter(link => link.frontmatter.block === 3)
+                            .map((link) => (
+                                <Link
+                                    emoji={link.frontmatter.emoji}
+                                    title={link.frontmatter.title}
+                                    href={link.frontmatter.href}
+                                />
+                            ))
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 class="text-center text-2xl font-bold mb-4">CV</h2>
+            <div class="mx-auto max-w-3xl">
+                <div class="grid grid-cols-1 gap-4">
+                    <Link
+                        emoji="📄"
+                        title="Download CV"
+                        href="/CV.pdf"
+                    />
                 </div>
             </div>
         </div>
