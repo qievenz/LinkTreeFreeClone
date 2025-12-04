@@ -11,21 +11,21 @@ const { contact, phone, email } = Astro.props;
     <div
         class="mx-auto max-w-7xl py-12 px-4 text-center sm:px-6 lg:py-16 lg:px-8"
     >
-        <h2 class="text-2xl font-bold tracking-tight text-indigo-300 sm:text-2xl">
+        <h2 class="text-2xl font-bold tracking-tight text-secondary-heading sm:text-2xl">
             <span class="block">{contact}</span>
         </h2>
         <div class="mt-5 flex justify-center">
-            <div class="inline-flex rounded-md shadow">
+            <div class="inline-flex">
                 <a
                     href={"tel://"+phone}
-                    class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-100 px-5 py-3 text-base font-medium text-indigo-700 hover:bg-indigo-200 shadow-md hover:shadow-xl"
+                    class="inline-flex items-center justify-center rounded-md border border-transparent bg-primary px-5 py-3 text-base font-medium text-accent hover:bg-primary/70 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background transition-colors"
                     >☎️ Call me</a
                 >
             </div>
             <div class="ml-3 inline-flex">
                 <a
                     href={"mailto://"+email}
-                    class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-100 px-5 py-3 text-base font-medium text-indigo-700 hover:bg-indigo-200 shadow-md hover:shadow-xl"
+                    class="inline-flex items-center justify-center rounded-md border border-transparent bg-primary px-5 py-3 text-base font-medium text-accent hover:bg-primary/70 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background transition-colors"
                     >📪 Email me</a
                 >
             </div>
