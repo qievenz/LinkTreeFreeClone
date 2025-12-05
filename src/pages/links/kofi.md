@@ -1,6 +1,7 @@
 ---
 title: "Ko-fi"
 href: "https://ko-fi.com/qievenz/"
-emoji: "☕"
-block: 3
+iconSrc: "/icons/kofi_brandasset/quicktip.gif"
+block: 5
+isBanner: true
 ---

@@ -1,6 +1,7 @@
 ---
 title: "PayPal"
 href: "https://www.paypal.me/qievenz"
-emoji: "💰"
-block: 3
+iconSrc: "/icons/paypal.svg"
+block: 7
+isBanner: true
 ---
