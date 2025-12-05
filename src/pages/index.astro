@@ -34,6 +34,11 @@ const links = await Astro.glob("./links/*.md");
                                 const isLastOnSm = (index === filteredLinks.length - 1) && (filteredLinks.length % 2 !== 0);
                                 const wrapperClass = isLastOnSm ? "sm:col-span-2" : "";
 
+                                if (link.frontmatter.block === 3) { // Cafecito
+                                    const cafecitoHTML = `<a href='https://cafecito.app/qievenz' rel='noopener' target='_blank'><img style="transform: scale(1.3);" srcset='https://cdn.cafecito.app/imgs/buttons/button_4.png 1x, https://cdn.cafecito.app/imgs/buttons/button_4_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_4_3.75x.png 3.75x' src='https://cdn.cafecito.app/imgs/buttons/button_4.png' alt='Invitame un café en cafecito.app' /></a>`;
+                                    return <div class:list={[wrapperClass, "flex justify-center"]} set:html={cafecitoHTML} />;
+                                }
+
                                 return (
                                     <div class={wrapperClass}>
                                         <Link
