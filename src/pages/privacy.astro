@@ -1,0 +1,71 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+import { 
+    SUBTITLE, 
+    TITLE, 
+    TAGLINE
+} from "../config";
+---
+
+<Layout title={"Privacy Policy - " + TITLE}>
+	
+    <Header subtitle={SUBTITLE} title={TITLE} tagline={TAGLINE} />
+
+    <section class="mb-8">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-3xl bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
+                <h1 class="text-3xl font-bold mb-6 text-secondary-heading border-b border-white/10 pb-4">Privacy Policy</h1>
+                
+                <div class="prose prose-invert max-w-none text-secondary-text space-y-6">
+                    <p class="italic text-sm opacity-70">Last Updated: February 19, 2026</p>
+
+                    <div>
+                        <h2 class="text-xl font-bold text-secondary-heading mb-2">1. Information We Collect</h2>
+                        <p>We do not collect any personal information about you unless you voluntarily provide it to us. However, you may be required to provide certain personal information to us when you elect to use certain products or services.</p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-xl font-bold text-secondary-heading mb-2">2. Automatically Collected Information</h2>
+                        <p>Information about your computer hardware and software may be automatically collected. This information can include: your IP address, browser type, domain names, access times and referring website addresses.</p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-xl font-bold text-secondary-heading mb-2">3. Use of your Personal Information</h2>
+                        <p>We use your personal information to operate and deliver the services you have requested.</p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-xl font-bold text-secondary-heading mb-2">4. Sharing Information with Third Parties</h2>
+                        <p>We do not sell, rent or lease customer lists to third parties.</p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-xl font-bold text-secondary-heading mb-2">5. Security of your Personal Information</h2>
+                        <p>We secure your personal information from unauthorized access, use, or disclosure using SSL Protocol.</p>
+                    </div>
+
+                    <div class="pt-4 border-t border-white/10">
+                        <h2 class="text-xl font-bold text-secondary-heading mb-2">6. Contact Information</h2>
+                        <p>We welcome your questions or comments regarding this Statement of Privacy. You can contact us at:</p>
+                        <p class="mt-2"><strong>Email Address:</strong> contact@qievenz.com</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <a href="/" class="text-accent hover:underline inline-flex items-center">
+                        <span class="mr-2">←</span> Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<Footer
+		title={TITLE}
+		tagline={TAGLINE}
+	/>
+
+</Layout>
